@@ -1,0 +1,173 @@
+[
+ {
+  "date": "2026-10-10",
+  "short": "SHOWROOM配信（実施）",
+  "time": "21:03頃〜",
+  "start": "21:03",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2108891174220284241"
+ },
+ {
+  "date": "2026-10-11",
+  "short": "SHOWROOM配信（実施）",
+  "time": "21:30頃〜22:00",
+  "start": "21:30",
+  "end": "22:00",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2109241367021125706"
+ },
+ {
+  "date": "2026-11-02",
+  "short": "SHOWROOM配信",
+  "time": "21:15〜",
+  "start": "21:15",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2115333957592219864"
+ },
+ {
+  "date": "2026-11-03",
+  "short": "SHOWROOM配信",
+  "time": "21:15〜",
+  "start": "21:15",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2115333957592219864"
+ },
+ {
+  "date": "2026-11-04",
+  "short": "SHOWROOM配信",
+  "time": "21:15〜",
+  "start": "21:15",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2115333957592219864"
+ },
+ {
+  "date": "2026-11-05",
+  "short": "SHOWROOM配信（15分）",
+  "time": "21:15〜21:30",
+  "start": "21:15",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2118291646148448731",
+  "end": "21:30"
+ },
+ {
+  "date": "2026-11-06",
+  "short": "SHOWROOM配信",
+  "time": "18:00〜18:30",
+  "start": "18:00",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2115333957592219864",
+  "end": "18:30"
+ },
+ {
+  "date": "2026-11-07",
+  "short": "SHOWROOM配信（遅延または中止の可能性）",
+  "time": "21:15〜（遅延または中止の可能性）",
+  "start": "21:15",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2118861406879805565"
+ },
+ {
+  "date": "2026-11-08",
+  "short": "SHOWROOM配信",
+  "time": "21:15〜",
+  "start": "21:15",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2115333957592219864"
+ },
+ {
+  "date": "2026-11-09",
+  "short": "SHOWROOM配信",
+  "time": "21:15〜",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2119419879866699959",
+  "start": "21:15"
+ },
+ {
+  "date": "2026-11-10",
+  "short": "SHOWROOM配信",
+  "time": "21:15〜",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2119419879866699959",
+  "start": "21:15"
+ },
+ {
+  "date": "2026-11-11",
+  "short": "SHOWROOM ラジオ配信",
+  "time": "8:00〜",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2119419879866699959",
+  "start": "08:00"
+ },
+ {
+  "date": "2026-11-12",
+  "short": "SHOWROOM配信",
+  "time": "21:15〜",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2119419879866699959",
+  "start": "21:15"
+ },
+ {
+  "date": "2026-11-13",
+  "short": "SHOWROOM配信（時間未発表）",
+  "time": "時間未定（朝か夕方）",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2119419879866699959"
+ },
+ {
+  "date": "2026-11-14",
+  "short": "SHOWROOM配信",
+  "time": "21:15〜",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2119419879866699959",
+  "start": "21:15"
+ },
+ {
+  "date": "2026-11-15",
+  "short": "SHOWROOM配信",
+  "time": "12:00〜",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2119419879866699959",
+  "start": "12:00"
+ },
+ {
+  "date": "2026-11-29",
+  "short": "初ステージ（お披露目LIVE）※詳細未発表",
+  "time": "",
+  "venue": "会場未発表",
+  "kind": "LIVE",
+  "ticket": "",
+  "post": "2119024546015773121"
+ }
+]

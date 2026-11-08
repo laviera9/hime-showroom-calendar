@@ -1,74 +1,89 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>姫咲こはく SHOWROOM配信スケジュール</title><style>
-*{box-sizing:border-box}body{margin:0;font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Noto Sans CJK JP","Noto Sans JP",sans-serif;background:linear-gradient(180deg,#fff5fb 0%,#f3f7ff 100%);color:#3a3046;line-height:1.4}
-a{color:inherit}
-header{text-align:center;padding:22px 14px 8px}
-header h1{margin:0;font-size:26px;letter-spacing:.04em;color:#e0457b}
-header h1 small{display:block;font-size:13px;color:#8a7a99;font-weight:normal;margin-top:4px;letter-spacing:0}
-.xbtn{display:inline-block;margin-top:10px;padding:7px 16px;border-radius:999px;background:#111;color:#fff;text-decoration:none;font-size:13px;font-weight:bold}
-.legend{display:flex;flex-wrap:wrap;gap:6px 14px;justify-content:center;font-size:12px;color:#6c5f7a;margin:10px auto 0;max-width:900px}
-.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:4px;border:1px solid #ddd}
-nav{display:flex;gap:8px;justify-content:center;margin:12px 0 4px}
-nav a{padding:5px 14px;border-radius:999px;background:#fff;border:1.5px solid #f6b5cc;color:#e0457b;text-decoration:none;font-weight:bold;font-size:14px}
-main{max-width:1080px;margin:0 auto;padding:0 12px 20px}
-.month{background:#fff;border-radius:18px;box-shadow:0 4px 18px rgba(224,69,123,.10);padding:14px 14px 16px;margin:16px 0}
-.month h2{margin:0 0 10px;font-size:20px;color:#5b4a6b}.month h2 .mn{font-size:30px;color:#e0457b}.month h2 small{font-size:13px;color:#a99bb7;font-weight:normal}
-.grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
-.hd{text-align:center;font-weight:bold;font-size:13px;padding:5px 0;border-radius:8px;background:#f5f0fa;color:#6c5f7a}
-.hd.sun{background:#ffe1e8;color:#d63a5e}.hd.sat{background:#dcefff;color:#2f7cc4}
-.cell{min-height:92px;border-radius:10px;padding:4px;background:#fdfcff;border:1px solid #eee7f3;min-width:0;overflow:hidden}
-.cell.out{background:transparent;border:none}
-.cell.sat{background:#eaf5ff;border-color:#cfe6fb}.cell.sun{background:#fff0f3;border-color:#fbd3dd}
-.cell.past{opacity:.38;filter:grayscale(.6)}
-.cell.today{box-shadow:inset 0 0 0 2px #f7a3c0;background-image:linear-gradient(#fff7e6,#fff7e6)}
-.dn{font-size:13px;font-weight:bold;margin:0 0 3px 2px;display:flex;gap:4px;align-items:center;flex-wrap:wrap}
-.cell.sun .dn{color:#d63a5e}.cell.sat .dn{color:#2f7cc4}
-.hol{font-size:9.5px;font-weight:normal;color:#d63a5e;background:#ffe1e8;border-radius:5px;padding:0 4px}
-.tdy{font-size:9.5px;background:#f7a3c0;color:#fff;border-radius:5px;padding:0 4px}
-.ev{position:relative;display:block;text-decoration:none;background:#fff;border:1px solid #f6c3d6;border-left:4px solid #ef6f9b;border-radius:7px;padding:3px 16px 3px 5px;margin-bottom:3px;font-size:11px;overflow-wrap:anywhere;word-break:break-word}
-.ev:hover{background:#fff4f8}
-.ev.tbd{border-left-color:#c9b8d8;border-color:#e5dcef;color:#7a6c88}
-.ev.photo{border-left-color:#ffb547;border-color:#ffe0b0}
-.ev .t{display:block;font-weight:bold;color:#e0457b;font-size:10.5px}
-.ev.photo .t{color:#d98100}
-.ev .n{display:block;font-weight:bold}
-.ev .vn{display:block;color:#857796;font-size:10px}
-.ev .ic{position:absolute;right:3px;top:3px;font-size:10px;line-height:1}
-.ic.v{color:#fff;background:#1d9bf0;border-radius:50%;width:12px;height:12px;text-align:center;font-size:9px;line-height:12px}
-.ic.s{opacity:.55}
-.tk{display:inline-block;font-size:10px;color:#2f7cc4;text-decoration:none;margin:0 0 4px 4px}
-.list{display:none;list-style:none;margin:0;padding:0}
-footer{text-align:center;font-size:12px;color:#8a7a99;padding:6px 16px 28px;max-width:900px;margin:0 auto}
-@media (max-width:760px){
- header h1{font-size:22px}
- .cell{min-height:44px;padding:3px}
- .cell .ev,.cell .tk{display:none}
- .cell:has(.ev)::after{content:"🐾";display:block;text-align:center;color:#ef6f9b;font-size:13px;line-height:1}
- .cell.past::after{content:none}
- .dn{font-size:12px;justify-content:center;margin:0}
- .hol,.tdy{display:none}
- .hd{font-size:12px}
- .grid{gap:3px}
- .list{display:block;margin-top:12px}
- .list li{display:flex;gap:10px;padding:8px 6px;border-top:1px dashed #f0dbe6}
- .list li.today{background:#fff7e6;border-radius:8px}
- .ld{width:52px;flex:none;text-align:center}
- .ld b{display:block;font-size:17px;color:#5b4a6b}.ld span{font-size:12px;color:#8a7a99}
- .ld .hol{display:block;margin-top:2px;font-size:9.5px}
- .list li.sun .ld b,.list li.sun .ld span{color:#d63a5e}.list li.sat .ld b,.list li.sat .ld span{color:#2f7cc4}
- .le{flex:1;min-width:0}
- .le .ev{font-size:13px;padding:6px 22px 6px 8px;margin-bottom:5px}
- .le .ev .t{font-size:12px}.le .ev .vn{font-size:11.5px}
- .le .ev .ic{top:7px;right:6px}
- .le .tk{font-size:12px}
-}
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ひめ配信 | 姫咲こはく SHOWROOM配信スケジュール</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#b9d3ea">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="ひめ配信">
+<link rel="apple-touch-icon" href="assets/icon-180.png"><link rel="icon" href="assets/icon-192.png">
+<style>
+:root{--bg:#b9d3ea;--bg2:#a9c7e2;--ink:#2f4c6e;--soft:#6b86a5;--white:#fbfdff;--acc:#3f86c4;--pink:#c9577c}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Noto Sans CJK JP",sans-serif;color:var(--ink);line-height:1.5;
+background:var(--bg) radial-gradient(circle at 20% 10%,#cfe2f3 0,transparent 55%),radial-gradient(circle at 90% 80%,#c4dbef 0,transparent 50%);background-color:var(--bg);
+padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);overflow-x:hidden}
+a{color:inherit}img{max-width:100%;display:block}
+.relief{height:56px;background:url(assets/relief-top.jpg) center/cover}
+.relief.b{background-image:url(assets/relief-bottom.jpg)}
+main{max-width:720px;margin:0 auto;padding:0 12px 24px}
+.plaque{background:linear-gradient(180deg,#c4dbef,#b3cde6);border-radius:22px;padding:16px;margin:14px 0;
+box-shadow:inset 0 2px 0 rgba(255,255,255,.7),inset 0 -3px 6px rgba(60,90,130,.18),0 6px 14px rgba(50,80,120,.18);
+border:5px solid var(--white);outline:2px dotted rgba(255,255,255,.9);outline-offset:-11px}
+h1{margin:6px 0 0;text-align:center;font-size:24px;color:#fff;text-shadow:0 1px 0 #8fb0cf,0 2px 4px rgba(40,70,110,.35);letter-spacing:.06em}
+.sub{text-align:center;font-size:12px;color:#fff;text-shadow:0 1px 2px rgba(40,70,110,.4);margin:2px 0 0}
+h2{margin:0 0 10px;font-size:17px;color:#fff;text-shadow:0 1px 2px rgba(40,70,110,.45);text-align:center}
+h2:before,h2:after{content:" ❦ ";color:#fff;opacity:.9}
+.next{text-align:center;background:var(--white);border-radius:16px;padding:14px 10px;box-shadow:inset 0 0 0 2px #dbe8f5}
+.next .lbl{font-size:12px;color:var(--soft);font-weight:bold;letter-spacing:.1em}
+.next .when{font-size:30px;font-weight:bold;color:var(--acc);margin:4px 0}
+.next .what{font-size:15px;font-weight:bold}
+.next .note{font-size:12px;color:var(--soft);margin-top:6px}
+.btn{display:block;text-align:center;text-decoration:none;font-weight:bold;border-radius:999px;padding:14px;margin:10px 0 0;font-size:17px;
+background:linear-gradient(180deg,#fff,#e6f0f9);color:var(--acc);border:3px solid #fff;box-shadow:0 3px 0 #8fb0cf,0 5px 10px rgba(40,70,110,.25)}
+.btn.main{background:linear-gradient(180deg,#5d9ed6,#3f7fb9);color:#fff;border-color:#e9f3fb}
+.row{display:flex;gap:8px}.row .btn{flex:1;font-size:14px;padding:12px 6px}
+.week{list-style:none;margin:0;padding:0}
+.week li{display:flex;gap:10px;align-items:flex-start;background:var(--white);border-radius:14px;padding:10px 12px;margin-bottom:7px;box-shadow:inset 0 0 0 2px #dbe8f5}
+.week li.today{box-shadow:inset 0 0 0 3px #f0c75e;background:#fffaf0}
+.week li.past{opacity:.55}
+.wd{flex:none;width:72px;font-size:13px;color:var(--soft)}.wd b{font-size:19px;color:var(--ink);margin-right:2px}
+.week li.sun .wd,.week li.sun .wd b{color:var(--pink)}.week li.sat .wd,.week li.sat .wd b{color:var(--acc)}
+.wb{flex:1;min-width:0}
+.wk-ev{display:block;text-decoration:none;font-size:15px;overflow-wrap:anywhere}.wk-ev b{color:var(--acc);font-size:17px}
+.wk-none{color:#9fb3c8;font-size:14px}
+.wkimg{border-radius:14px;border:4px solid #fff;box-shadow:0 4px 10px rgba(40,70,110,.25)}
+.cap{font-size:12px;color:#fff;text-shadow:0 1px 2px rgba(40,70,110,.5);margin:8px 2px 0}
+details{background:var(--white);border-radius:16px;padding:10px 12px}
+summary{font-weight:bold;cursor:pointer;color:var(--acc);font-size:15px}
+.month{margin:10px 0}.month h2{color:var(--ink);text-shadow:none;font-size:16px}.month h2:before,.month h2:after{content:""}
+.month h2 .mn{font-size:22px;color:var(--acc)}.month h2 small{font-size:12px;color:var(--soft);font-weight:normal}
+.grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px}
+.hd{text-align:center;font-weight:bold;font-size:12px;padding:3px 0;border-radius:6px;background:#e3eef8;color:var(--soft)}
+.hd.sun{color:var(--pink)}.hd.sat{color:var(--acc)}
+.cell{min-height:40px;border-radius:8px;padding:2px;background:#f4f8fc;border:1px solid #dbe8f5;min-width:0;overflow:hidden;text-align:center}
+.cell.out{background:transparent;border:none}.cell.past{opacity:.4}
+.cell.today{box-shadow:inset 0 0 0 2px #f0c75e;background:#fffaf0}
+.cell .ev,.cell .tk,.hol,.tdy{display:none}
+.cell:has(.ev)::after{content:"♡";display:block;color:var(--acc);font-size:13px;line-height:1}
+.cell.past::after{content:none!important}
+.dn{font-size:12px;font-weight:bold}.cell.sun .dn{color:var(--pink)}.cell.sat .dn{color:var(--acc)}
+.list{list-style:none;margin:10px 0 0;padding:0}
+.list li{display:flex;gap:8px;padding:7px 2px;border-top:1px dashed #cfe0ef}
+.list li.today{background:#fffaf0}
+.ld{width:50px;flex:none;text-align:center}.ld b{display:block;font-size:16px}.ld span{font-size:11px;color:var(--soft)}
+.list li.sun .ld{color:var(--pink)}.list li.sat .ld{color:var(--acc)}
+.le{flex:1;min-width:0}
+.ev{position:relative;display:block;text-decoration:none;background:#fff;border:1px solid #dbe8f5;border-left:4px solid var(--acc);border-radius:8px;padding:5px 22px 5px 8px;margin-bottom:4px;font-size:13px;overflow-wrap:anywhere}
+.ev.tbd{border-left-color:#a9bccf;color:var(--soft)}.ev.photo{border-left-color:#e3a73b}
+.ev .t{display:block;font-weight:bold;color:var(--acc)}.ev .n{display:block;font-weight:bold}.ev .vn{display:block;color:var(--soft);font-size:11px}
+.ev .ic{position:absolute;right:5px;top:6px;font-size:10px}
+.ic.v{color:#fff;background:#1d9bf0;border-radius:50%;width:13px;height:13px;text-align:center;font-size:9px;line-height:13px}
+.tk{display:inline-block;font-size:12px;color:var(--acc);text-decoration:none;margin:0 0 4px 4px}
+footer{text-align:center;font-size:12px;color:#fff;text-shadow:0 1px 2px rgba(40,70,110,.5);padding:4px 16px 16px}
+footer a{color:#fff}
 </style></head><body>
-<header><h1>🐈‍⬛ ひめ SHOWROOM配信スケジュール 🐾<small>姫咲こはく（ﾋﾒﾁｬﾝ🎀♡） ／ 時刻はすべて日本時間 ／ 終了時刻は未定のものあり</small></h1>
-<a class="xbtn" href="https://x.com/himechanluv" target="_blank" rel="noopener">𝕏 公式X @himechanluv</a> <a class="xbtn" style="background:#ef6f9b" href="https://www.showroom-live.com/r/d76e710150328" target="_blank" rel="noopener">📺 SHOWROOMルーム</a> <a class="xbtn" style="background:#8a6bd1" href="hime_showroom.ics">🗓️ カレンダーに追加(.ics)</a>
-<p class="nonotify" style="font-size:12px;color:#888;margin:6px 0 0">このページから通知は届きません。見るだけでOKです🐾（カレンダーに登録した場合の通知は、各アプリの設定でオフにできます）</p>
-<div class="legend"><span><i style="background:#ef6f9b"></i>SHOWROOM配信</span><span><i style="background:#c9b8d8"></i>詳細未発表</span><span><i style="background:#eaf5ff"></i>土曜</span><span><i style="background:#fff0f3"></i>日曜・祝日</span><span><span class="ic v" style="position:static;display:inline-block">✓</span> 告知ポスト</span><span>🔍 公式Xの検索</span></div>
-<nav><a href="#m10">10月</a><a href="#m11">11月</a></nav></header>
-<main><section class="month" id="m10"><h2><span class="mn">10</span>月 <small>2026</small></h2>
+<div class="relief"></div>
+<main>
+<h1>ひめ配信 🩵</h1><p class="sub">姫咲こはく SHOWROOM ／ 時刻はすべて日本時間</p>
+<section class="plaque"><h2>Next</h2><div class="next" id="next"><div class="lbl">次の配信</div><div class="what">読み込み中…</div></div>
+<a class="btn main" href="https://www.showroom-live.com/r/d76e710150328" target="_blank" rel="noopener">📺 SHOWROOMルームを開く</a>
+<p class="cap">※配信はSHOWROOM（外部サイト/アプリ）で開きます。このアプリ内では再生できません。</p></section>
+<section class="plaque"><h2>This Week</h2><ul class="week"><li class="" data-date="2026-11-09"><span class="wd"><b>11/9</b>(月)</span><span class="wb"><a class="wk-ev" href="https://x.com/himechanluv/status/2119419879866699959" target="_blank" rel="noopener"><b>21:15〜</b> SHOWROOM配信</a></span></li><li class="" data-date="2026-11-10"><span class="wd"><b>11/10</b>(火)</span><span class="wb"><a class="wk-ev" href="https://x.com/himechanluv/status/2119419879866699959" target="_blank" rel="noopener"><b>21:15〜</b> SHOWROOM配信</a></span></li><li class="" data-date="2026-11-11"><span class="wd"><b>11/11</b>(水)</span><span class="wb"><a class="wk-ev" href="https://x.com/himechanluv/status/2119419879866699959" target="_blank" rel="noopener"><b>8:00〜</b> SHOWROOM ラジオ配信</a></span></li><li class="" data-date="2026-11-12"><span class="wd"><b>11/12</b>(木)</span><span class="wb"><a class="wk-ev" href="https://x.com/himechanluv/status/2119419879866699959" target="_blank" rel="noopener"><b>21:15〜</b> SHOWROOM配信</a></span></li><li class="" data-date="2026-11-13"><span class="wd"><b>11/13</b>(金)</span><span class="wb"><a class="wk-ev" href="https://x.com/himechanluv/status/2119419879866699959" target="_blank" rel="noopener"><b>時間未定（朝か夕方）</b> SHOWROOM配信（時間未発表）</a></span></li><li class="sat" data-date="2026-11-14"><span class="wd"><b>11/14</b>(土)</span><span class="wb"><a class="wk-ev" href="https://x.com/himechanluv/status/2119419879866699959" target="_blank" rel="noopener"><b>21:15〜</b> SHOWROOM配信</a></span></li><li class="sun" data-date="2026-11-15"><span class="wd"><b>11/15</b>(日)</span><span class="wb"><a class="wk-ev" href="https://x.com/himechanluv/status/2119419879866699959" target="_blank" rel="noopener"><b>12:00〜</b> SHOWROOM配信</a></span></li></ul>
+<p class="cap">終了時刻は告知があるものだけ表示（17歳のため配信は22:00まで）。各予定をタップで告知ポスト。</p></section>
+<section class="plaque"><h2>Weekly Card</h2><img class="wkimg" src="assets/week-2026-11-09.jpg" alt="週間予定画像 11/9（月）〜11/15（日）" loading="lazy">
+<p class="cap">画像は11/9（月）〜11/15（日）の固定版です。予定が変わった場合は上の「This Week」（テキスト）が優先です。</p></section>
+<section class="plaque"><details><summary>📅 月カレンダー・一覧を開く</summary><section class="month" id="m10"><h2><span class="mn">10</span>月 <small>2026</small></h2>
 <div class="grid"><div class="hd sun">日</div><div class="hd">月</div><div class="hd">火</div><div class="hd">水</div><div class="hd">木</div><div class="hd">金</div><div class="hd sat">土</div>
 <div class="cell out"></div>
 <div class="cell out"></div>
@@ -117,8 +132,8 @@ footer{text-align:center;font-size:12px;color:#8a7a99;padding:6px 16px 28px;max-
 <div class="cell past"><div class="dn">5</div><a class="ev" href="https://x.com/himechanluv/status/2118291646148448731" target="_blank" rel="noopener"><span class="t">21:15〜21:30</span><span class="n">SHOWROOM配信（15分）</span><span class="vn">📍SHOWROOM</span><span class="ic v" title="告知ポスト">✓</span></a><a class="tk" href="https://www.showroom-live.com/r/d76e710150328" target="_blank" rel="noopener">📺ルームへ</a></div>
 <div class="cell past"><div class="dn">6</div><a class="ev" href="https://x.com/himechanluv/status/2115333957592219864" target="_blank" rel="noopener"><span class="t">18:00〜18:30</span><span class="n">SHOWROOM配信</span><span class="vn">📍SHOWROOM</span><span class="ic v" title="告知ポスト">✓</span></a><a class="tk" href="https://www.showroom-live.com/r/d76e710150328" target="_blank" rel="noopener">📺ルームへ</a></div>
 <div class="cell sat past"><div class="dn">7</div><a class="ev" href="https://x.com/himechanluv/status/2118861406879805565" target="_blank" rel="noopener"><span class="t">21:15〜（遅延または中止の可能性）</span><span class="n">SHOWROOM配信（遅延または中止の可能性）</span><span class="vn">📍SHOWROOM</span><span class="ic v" title="告知ポスト">✓</span></a><a class="tk" href="https://www.showroom-live.com/r/d76e710150328" target="_blank" rel="noopener">📺ルームへ</a></div>
-<div class="cell sun today"><div class="dn">8<span class="tdy">今日</span></div><a class="ev" href="https://x.com/himechanluv/status/2115333957592219864" target="_blank" rel="noopener"><span class="t">21:15〜</span><span class="n">SHOWROOM配信</span><span class="vn">📍SHOWROOM</span><span class="ic v" title="告知ポスト">✓</span></a><a class="tk" href="https://www.showroom-live.com/r/d76e710150328" target="_blank" rel="noopener">📺ルームへ</a></div>
-<div class="cell"><div class="dn">9</div><a class="ev" href="https://x.com/himechanluv/status/2119419879866699959" target="_blank" rel="noopener"><span class="t">21:15〜</span><span class="n">SHOWROOM配信</span><span class="vn">📍SHOWROOM</span><span class="ic v" title="告知ポスト">✓</span></a><a class="tk" href="https://www.showroom-live.com/r/d76e710150328" target="_blank" rel="noopener">📺ルームへ</a></div>
+<div class="cell sun past"><div class="dn">8</div><a class="ev" href="https://x.com/himechanluv/status/2115333957592219864" target="_blank" rel="noopener"><span class="t">21:15〜</span><span class="n">SHOWROOM配信</span><span class="vn">📍SHOWROOM</span><span class="ic v" title="告知ポスト">✓</span></a><a class="tk" href="https://www.showroom-live.com/r/d76e710150328" target="_blank" rel="noopener">📺ルームへ</a></div>
+<div class="cell today"><div class="dn">9<span class="tdy">今日</span></div><a class="ev" href="https://x.com/himechanluv/status/2119419879866699959" target="_blank" rel="noopener"><span class="t">21:15〜</span><span class="n">SHOWROOM配信</span><span class="vn">📍SHOWROOM</span><span class="ic v" title="告知ポスト">✓</span></a><a class="tk" href="https://www.showroom-live.com/r/d76e710150328" target="_blank" rel="noopener">📺ルームへ</a></div>
 <div class="cell"><div class="dn">10</div><a class="ev" href="https://x.com/himechanluv/status/2119419879866699959" target="_blank" rel="noopener"><span class="t">21:15〜</span><span class="n">SHOWROOM配信</span><span class="vn">📍SHOWROOM</span><span class="ic v" title="告知ポスト">✓</span></a><a class="tk" href="https://www.showroom-live.com/r/d76e710150328" target="_blank" rel="noopener">📺ルームへ</a></div>
 <div class="cell"><div class="dn">11</div><a class="ev" href="https://x.com/himechanluv/status/2119419879866699959" target="_blank" rel="noopener"><span class="t">8:00〜</span><span class="n">SHOWROOM ラジオ配信</span><span class="vn">📍SHOWROOM</span><span class="ic v" title="告知ポスト">✓</span></a><a class="tk" href="https://www.showroom-live.com/r/d76e710150328" target="_blank" rel="noopener">📺ルームへ</a></div>
 <div class="cell"><div class="dn">12</div><a class="ev" href="https://x.com/himechanluv/status/2119419879866699959" target="_blank" rel="noopener"><span class="t">21:15〜</span><span class="n">SHOWROOM配信</span><span class="vn">📍SHOWROOM</span><span class="ic v" title="告知ポスト">✓</span></a><a class="tk" href="https://www.showroom-live.com/r/d76e710150328" target="_blank" rel="noopener">📺ルームへ</a></div>
@@ -152,8 +167,8 @@ footer{text-align:center;font-size:12px;color:#8a7a99;padding:6px 16px 28px;max-
 <li class=""><div class="ld"><b>11/5</b><span>(木)</span></div><div class="le"><a class="ev" href="https://x.com/himechanluv/status/2118291646148448731" target="_blank" rel="noopener"><span class="t">21:15〜21:30</span><span class="n">SHOWROOM配信（15分）</span><span class="vn">📍SHOWROOM</span><span class="ic v" title="告知ポスト">✓</span></a><a class="tk" href="https://www.showroom-live.com/r/d76e710150328" target="_blank" rel="noopener">📺ルームへ</a></div></li>
 <li class=""><div class="ld"><b>11/6</b><span>(金)</span></div><div class="le"><a class="ev" href="https://x.com/himechanluv/status/2115333957592219864" target="_blank" rel="noopener"><span class="t">18:00〜18:30</span><span class="n">SHOWROOM配信</span><span class="vn">📍SHOWROOM</span><span class="ic v" title="告知ポスト">✓</span></a><a class="tk" href="https://www.showroom-live.com/r/d76e710150328" target="_blank" rel="noopener">📺ルームへ</a></div></li>
 <li class="sat"><div class="ld"><b>11/7</b><span>(土)</span></div><div class="le"><a class="ev" href="https://x.com/himechanluv/status/2118861406879805565" target="_blank" rel="noopener"><span class="t">21:15〜（遅延または中止の可能性）</span><span class="n">SHOWROOM配信（遅延または中止の可能性）</span><span class="vn">📍SHOWROOM</span><span class="ic v" title="告知ポスト">✓</span></a><a class="tk" href="https://www.showroom-live.com/r/d76e710150328" target="_blank" rel="noopener">📺ルームへ</a></div></li>
-<li class="sun today"><div class="ld"><b>11/8</b><span>(日)</span></div><div class="le"><a class="ev" href="https://x.com/himechanluv/status/2115333957592219864" target="_blank" rel="noopener"><span class="t">21:15〜</span><span class="n">SHOWROOM配信</span><span class="vn">📍SHOWROOM</span><span class="ic v" title="告知ポスト">✓</span></a><a class="tk" href="https://www.showroom-live.com/r/d76e710150328" target="_blank" rel="noopener">📺ルームへ</a></div></li>
-<li class=""><div class="ld"><b>11/9</b><span>(月)</span></div><div class="le"><a class="ev" href="https://x.com/himechanluv/status/2119419879866699959" target="_blank" rel="noopener"><span class="t">21:15〜</span><span class="n">SHOWROOM配信</span><span class="vn">📍SHOWROOM</span><span class="ic v" title="告知ポスト">✓</span></a><a class="tk" href="https://www.showroom-live.com/r/d76e710150328" target="_blank" rel="noopener">📺ルームへ</a></div></li>
+<li class="sun"><div class="ld"><b>11/8</b><span>(日)</span></div><div class="le"><a class="ev" href="https://x.com/himechanluv/status/2115333957592219864" target="_blank" rel="noopener"><span class="t">21:15〜</span><span class="n">SHOWROOM配信</span><span class="vn">📍SHOWROOM</span><span class="ic v" title="告知ポスト">✓</span></a><a class="tk" href="https://www.showroom-live.com/r/d76e710150328" target="_blank" rel="noopener">📺ルームへ</a></div></li>
+<li class=" today"><div class="ld"><b>11/9</b><span>(月)</span></div><div class="le"><a class="ev" href="https://x.com/himechanluv/status/2119419879866699959" target="_blank" rel="noopener"><span class="t">21:15〜</span><span class="n">SHOWROOM配信</span><span class="vn">📍SHOWROOM</span><span class="ic v" title="告知ポスト">✓</span></a><a class="tk" href="https://www.showroom-live.com/r/d76e710150328" target="_blank" rel="noopener">📺ルームへ</a></div></li>
 <li class=""><div class="ld"><b>11/10</b><span>(火)</span></div><div class="le"><a class="ev" href="https://x.com/himechanluv/status/2119419879866699959" target="_blank" rel="noopener"><span class="t">21:15〜</span><span class="n">SHOWROOM配信</span><span class="vn">📍SHOWROOM</span><span class="ic v" title="告知ポスト">✓</span></a><a class="tk" href="https://www.showroom-live.com/r/d76e710150328" target="_blank" rel="noopener">📺ルームへ</a></div></li>
 <li class=""><div class="ld"><b>11/11</b><span>(水)</span></div><div class="le"><a class="ev" href="https://x.com/himechanluv/status/2119419879866699959" target="_blank" rel="noopener"><span class="t">8:00〜</span><span class="n">SHOWROOM ラジオ配信</span><span class="vn">📍SHOWROOM</span><span class="ic v" title="告知ポスト">✓</span></a><a class="tk" href="https://www.showroom-live.com/r/d76e710150328" target="_blank" rel="noopener">📺ルームへ</a></div></li>
 <li class=""><div class="ld"><b>11/12</b><span>(木)</span></div><div class="le"><a class="ev" href="https://x.com/himechanluv/status/2119419879866699959" target="_blank" rel="noopener"><span class="t">21:15〜</span><span class="n">SHOWROOM配信</span><span class="vn">📍SHOWROOM</span><span class="ic v" title="告知ポスト">✓</span></a><a class="tk" href="https://www.showroom-live.com/r/d76e710150328" target="_blank" rel="noopener">📺ルームへ</a></div></li>
@@ -161,6 +176,36 @@ footer{text-align:center;font-size:12px;color:#8a7a99;padding:6px 16px 28px;max-
 <li class="sat"><div class="ld"><b>11/14</b><span>(土)</span></div><div class="le"><a class="ev" href="https://x.com/himechanluv/status/2119419879866699959" target="_blank" rel="noopener"><span class="t">21:15〜</span><span class="n">SHOWROOM配信</span><span class="vn">📍SHOWROOM</span><span class="ic v" title="告知ポスト">✓</span></a><a class="tk" href="https://www.showroom-live.com/r/d76e710150328" target="_blank" rel="noopener">📺ルームへ</a></div></li>
 <li class="sun"><div class="ld"><b>11/15</b><span>(日)</span></div><div class="le"><a class="ev" href="https://x.com/himechanluv/status/2119419879866699959" target="_blank" rel="noopener"><span class="t">12:00〜</span><span class="n">SHOWROOM配信</span><span class="vn">📍SHOWROOM</span><span class="ic v" title="告知ポスト">✓</span></a><a class="tk" href="https://www.showroom-live.com/r/d76e710150328" target="_blank" rel="noopener">📺ルームへ</a></div></li>
 <li class="sun"><div class="ld"><b>11/29</b><span>(日)</span></div><div class="le"><a class="ev tbd photo" href="https://x.com/himechanluv/status/2119024546015773121" target="_blank" rel="noopener"><span class="n">初ステージ（お披露目LIVE）※詳細未発表</span><span class="vn">📍会場未発表</span><span class="ic v" title="告知ポスト">✓</span></a></div></li>
-</ol></section></main>
-<footer>姫咲こはく（@himechanluv）の公式Xの告知をもとに作成。✓をタップすると元の告知ポストが開きます。終了時刻が書かれていない配信は「〜」表示（.icsでは仮に1時間）。予定は変わることがあるので、最新は<a href="https://x.com/himechanluv">公式X</a>で確認してね。<br>作成日: 2026-11-08</footer>
+</ol></section></details></section>
+<section class="plaque"><h2>Links</h2>
+<div class="row"><a class="btn" href="https://x.com/himechanluv" target="_blank" rel="noopener">𝕏 公式X</a><a class="btn" href="hime_showroom.ics">🗓️ カレンダー登録</a></div>
+<button class="btn" style="width:100%;font-family:inherit" onclick="location.reload()">🔄 最新に更新</button>
+<p class="cap">このページ/アプリから通知は届きません。見るだけでOKです🐾（カレンダー登録した場合の通知は各アプリで設定）</p></section>
+</main>
+<footer>@himechanluv の公式X告知をもとに作成。予定は変わることがあるので最新は<a href="https://x.com/himechanluv">公式X</a>で。<br>最終更新: 2026-11-09 02:02 JST</footer>
+<div class="relief b"></div>
+<script>
+(function(){
+var EV=[{"date": "2026-10-10", "start": "21:03", "end": null, "time": "21:03頃〜", "short": "SHOWROOM配信（実施）", "kind": "SHOWROOM", "post": "https://x.com/himechanluv/status/2108891174220284241"}, {"date": "2026-10-11", "start": "21:30", "end": "22:00", "time": "21:30頃〜22:00", "short": "SHOWROOM配信（実施）", "kind": "SHOWROOM", "post": "https://x.com/himechanluv/status/2109241367021125706"}, {"date": "2026-11-02", "start": "21:15", "end": null, "time": "21:15〜", "short": "SHOWROOM配信", "kind": "SHOWROOM", "post": "https://x.com/himechanluv/status/2115333957592219864"}, {"date": "2026-11-03", "start": "21:15", "end": null, "time": "21:15〜", "short": "SHOWROOM配信", "kind": "SHOWROOM", "post": "https://x.com/himechanluv/status/2115333957592219864"}, {"date": "2026-11-04", "start": "21:15", "end": null, "time": "21:15〜", "short": "SHOWROOM配信", "kind": "SHOWROOM", "post": "https://x.com/himechanluv/status/2115333957592219864"}, {"date": "2026-11-05", "start": "21:15", "end": "21:30", "time": "21:15〜21:30", "short": "SHOWROOM配信（15分）", "kind": "SHOWROOM", "post": "https://x.com/himechanluv/status/2118291646148448731"}, {"date": "2026-11-06", "start": "18:00", "end": "18:30", "time": "18:00〜18:30", "short": "SHOWROOM配信", "kind": "SHOWROOM", "post": "https://x.com/himechanluv/status/2115333957592219864"}, {"date": "2026-11-07", "start": "21:15", "end": null, "time": "21:15〜（遅延または中止の可能性）", "short": "SHOWROOM配信（遅延または中止の可能性）", "kind": "SHOWROOM", "post": "https://x.com/himechanluv/status/2118861406879805565"}, {"date": "2026-11-08", "start": "21:15", "end": null, "time": "21:15〜", "short": "SHOWROOM配信", "kind": "SHOWROOM", "post": "https://x.com/himechanluv/status/2115333957592219864"}, {"date": "2026-11-09", "start": "21:15", "end": null, "time": "21:15〜", "short": "SHOWROOM配信", "kind": "SHOWROOM", "post": "https://x.com/himechanluv/status/2119419879866699959"}, {"date": "2026-11-10", "start": "21:15", "end": null, "time": "21:15〜", "short": "SHOWROOM配信", "kind": "SHOWROOM", "post": "https://x.com/himechanluv/status/2119419879866699959"}, {"date": "2026-11-11", "start": "08:00", "end": null, "time": "8:00〜", "short": "SHOWROOM ラジオ配信", "kind": "SHOWROOM", "post": "https://x.com/himechanluv/status/2119419879866699959"}, {"date": "2026-11-12", "start": "21:15", "end": null, "time": "21:15〜", "short": "SHOWROOM配信", "kind": "SHOWROOM", "post": "https://x.com/himechanluv/status/2119419879866699959"}, {"date": "2026-11-13", "start": null, "end": null, "time": "時間未定（朝か夕方）", "short": "SHOWROOM配信（時間未発表）", "kind": "SHOWROOM", "post": "https://x.com/himechanluv/status/2119419879866699959"}, {"date": "2026-11-14", "start": "21:15", "end": null, "time": "21:15〜", "short": "SHOWROOM配信", "kind": "SHOWROOM", "post": "https://x.com/himechanluv/status/2119419879866699959"}, {"date": "2026-11-15", "start": "12:00", "end": null, "time": "12:00〜", "short": "SHOWROOM配信", "kind": "SHOWROOM", "post": "https://x.com/himechanluv/status/2119419879866699959"}, {"date": "2026-11-29", "start": null, "end": null, "time": "", "short": "初ステージ（お披露目LIVE）※詳細未発表", "kind": "LIVE", "post": "https://x.com/himechanluv/status/2119024546015773121"}],SR="https://www.showroom-live.com/r/d76e710150328";
+function jstNow(){var p=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date()),o={};p.forEach(function(x){o[x.type]=x.value});return {date:o.year+'-'+o.month+'-'+o.day,min:(+o.hour%24)*60+(+o.minute)}}
+function m(s){var a=s.split(':');return +a[0]*60+ +a[1]}
+var n=jstNow(),el=document.getElementById('next'),WD='日月火水木金土';
+document.querySelectorAll('.week li').forEach(function(li){var d=li.getAttribute('data-date');if(d===n.date)li.classList.add('today');else if(d<n.date)li.classList.add('past')});
+var best=null,live=null,tbd=null;
+EV.forEach(function(e){if(e.kind!=='SHOWROOM')return;
+ if(!e.start){if(e.date>=n.date&&(!tbd||e.date<tbd.date))tbd=e;return}
+ var s=m(e.start),end=e.end?m(e.end):Math.min(s+60,22*60);
+ if(e.date===n.date&&s<=n.min&&n.min<end){live=e;return}
+ if(e.date>n.date||(e.date===n.date&&s>n.min)){if(!best||e.date<best.date||(e.date===best.date&&s<m(best.start)))best=e}});
+function fmt(d){return (+d.slice(5,7))+'/'+(+d.slice(8))+'('+WD[new Date(Date.UTC(+d.slice(0,4),+d.slice(5,7)-1,+d.slice(8))).getUTCDay()]+')'}
+var e=live||best,h='';
+if(e){h='<div class="lbl">'+(live?'配信中かも（予定時間内）':'次の配信')+'</div><div class="when">'+fmt(e.date)+' '+e.start+'〜</div><div class="what">'+e.short+'</div>'+
+ '<div class="note">終了時刻：'+(e.end?e.end:'未定')+'　/　日本時間'+(e.post?'　<a href="'+e.post+'" target="_blank" rel="noopener">告知ポスト</a>':'')+'</div>';
+ if(tbd&&tbd.date<e.date)h+='<div class="note">※'+fmt(tbd.date)+'は時間未発表（'+tbd.time+'）</div>'}
+else if(tbd){h='<div class="lbl">次の配信</div><div class="when">'+fmt(tbd.date)+'</div><div class="what">時間未発表（'+tbd.time+'）</div>'}
+else h='<div class="lbl">次の配信</div><div class="what">告知待ち（未定）</div>';
+el.innerHTML=h;
+})();
+</script>
+<script>if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(function(){});</script>
 </body></html>
