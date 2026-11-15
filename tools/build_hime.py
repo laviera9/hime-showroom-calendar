@@ -54,7 +54,7 @@ def month(y,mo,start_day=1):
 import zoneinfo, json as _json, os as _os
 JST=zoneinfo.ZoneInfo('Asia/Tokyo')
 NOW=dt.datetime.now(JST)
-WEEK={'img':'assets/week-2026-11-09.jpg','start':'2026-11-09','end':'2026-11-15','label':'11/9（月）〜11/15（日）'}
+WEEK={'img':'assets/week-2026-11-16.jpg','start':'2026-11-16','end':'2026-11-22','label':'11/16（月）〜11/22（日）'}
 SR='https://www.showroom-live.com/r/d76e710150328'
 jsev=[dict(date=r['date'],start=r.get('start'),end=r.get('end'),time=r['time'],short=r['short'],kind=r['kind'],
   post=(r['post'] if r['post'].startswith('http') else P+r['post']) if r['post'] else '') for r in EV]
@@ -194,7 +194,7 @@ manifest=dict(name='ひめ配信 – 姫咲こはく SHOWROOM',short_name='ひ�
          dict(src='assets/icon-512-maskable.png',sizes='512x512',type='image/png',purpose='maskable')])
 _json.dump(manifest,open('hime-showroom-calendar/manifest.webmanifest','w'),ensure_ascii=False,indent=1)
 open('hime-showroom-calendar/sw.js','w').write('''// network-first; cache only as offline fallback. No push.
-const C='hime-v1';
+const C='hime-v2';
 self.addEventListener('install',e=>self.skipWaiting());
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==C).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',e=>{const u=new URL(e.request.url);if(e.request.method!=='GET'||u.origin!==location.origin)return;
