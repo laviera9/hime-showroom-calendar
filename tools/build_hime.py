@@ -54,7 +54,7 @@ def month(y,mo,start_day=1):
 import zoneinfo, json as _json, os as _os
 JST=zoneinfo.ZoneInfo('Asia/Tokyo')
 NOW=dt.datetime.now(JST)
-WEEK={'img':'assets/week-2026-11-16.jpg','start':'2026-11-16','end':'2026-11-22','label':'11/16（月）〜11/22（日）'}
+WEEK={'img':'','start':'2026-11-23','end':'2026-11-29','label':'11/23（月）〜11/29（日）'}
 SR='https://www.showroom-live.com/r/d76e710150328'
 jsev=[dict(date=r['date'],start=r.get('start'),end=r.get('end'),time=r['time'],short=r['short'],kind=r['kind'],
   post=(r['post'] if r['post'].startswith('http') else P+r['post']) if r['post'] else '') for r in EV]
@@ -141,7 +141,7 @@ function m(s){var a=s.split(':');return +a[0]*60+ +a[1]}
 var n=jstNow(),el=document.getElementById('next'),WD='日月火水木金土';
 document.querySelectorAll('.week li').forEach(function(li){var d=li.getAttribute('data-date');if(d===n.date)li.classList.add('today');else if(d<n.date)li.classList.add('past')});
 var best=null,live=null,tbd=null;
-EV.forEach(function(e){if(e.kind!=='SHOWROOM')return;
+EV.forEach(function(e){if(e.kind!=='SHOWROOM'&&e.kind!=='TIKTOK')return;
  if(!e.start){if(e.date>=n.date&&(!tbd||e.date<tbd.date))tbd=e;return}
  var s=m(e.start),end=e.end?m(e.end):Math.min(s+60,22*60);
  if(e.date===n.date&&s<=n.min&&n.min<end){live=e;return}
@@ -156,6 +156,9 @@ else h='<div class="lbl">次の配信</div><div class="what">告知待ち（未�
 el.innerHTML=h;
 })();
 '''.replace('__EV__',_json.dumps(jsev,ensure_ascii=False)).replace('__SR__',SR)
+week_card = (f"""<section class="plaque"><h2>Weekly Card</h2><img class="wkimg" src="{WEEK['img']}" alt="週間予定画像 {WEEK['label']}" loading="lazy">
+<p class="cap">画像は{WEEK['label']}の固定版です。予定が変わった場合は上の「This Week」（テキスト）が優先です。</p></section>
+""" if WEEK.get('img') else '')
 doc=f'''<!doctype html><html lang="ja"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>ひめ配信 | 姫咲こはく SHOWROOM配信スケジュール</title>
@@ -174,9 +177,7 @@ doc=f'''<!doctype html><html lang="ja"><head><meta charset="utf-8">
 <p class="cap">※配信はSHOWROOM（外部サイト/アプリ）で開きます。このアプリ内では再生できません。</p></section>
 <section class="plaque"><h2>This Week</h2><ul class="week">{week_rows()}</ul>
 <p class="cap">終了時刻は告知があるものだけ表示（17歳のため配信は22:00まで）。各予定をタップで告知ポスト。</p></section>
-<section class="plaque"><h2>Weekly Card</h2><img class="wkimg" src="{WEEK['img']}" alt="週間予定画像 {WEEK['label']}" loading="lazy">
-<p class="cap">画像は{WEEK['label']}の固定版です。予定が変わった場合は上の「This Week」（テキスト）が優先です。</p></section>
-<section class="plaque"><details><summary>📅 月カレンダー・一覧を開く</summary>{month(2026,10)}{month(2026,11)}</details></section>
+{week_card}<section class="plaque"><details><summary>📅 月カレンダー・一覧を開く</summary>{month(2026,10)}{month(2026,11)}</details></section>
 <section class="plaque"><h2>Links</h2>
 <div class="row"><a class="btn" href="https://x.com/himechanluv" target="_blank" rel="noopener">𝕏 公式X</a><a class="btn" href="hime_showroom.ics">🗓️ カレンダー登録</a></div>
 <button class="btn" style="width:100%;font-family:inherit" onclick="location.reload()">🔄 最新に更新</button>
@@ -194,7 +195,7 @@ manifest=dict(name='ひめ配信 – 姫咲こはく SHOWROOM',short_name='ひ�
          dict(src='assets/icon-512-maskable.png',sizes='512x512',type='image/png',purpose='maskable')])
 _json.dump(manifest,open('hime-showroom-calendar/manifest.webmanifest','w'),ensure_ascii=False,indent=1)
 open('hime-showroom-calendar/sw.js','w').write('''// network-first; cache only as offline fallback. No push.
-const C='hime-v2';
+const C='hime-v3';
 self.addEventListener('install',e=>self.skipWaiting());
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==C).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',e=>{const u=new URL(e.request.url);if(e.request.method!=='GET'||u.origin!==location.origin)return;

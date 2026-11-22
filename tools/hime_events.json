@@ -95,12 +95,12 @@
  {
   "date": "2026-11-09",
   "short": "SHOWROOM配信",
-  "time": "21:15〜",
+  "time": "21:30〜",
   "venue": "SHOWROOM",
   "kind": "SHOWROOM",
   "ticket": "https://www.showroom-live.com/r/d76e710150328",
-  "post": "2119419879866699959",
-  "start": "21:15"
+  "post": "2119758268805607547",
+  "start": "21:30"
  },
  {
   "date": "2026-11-10",
@@ -134,22 +134,23 @@
  },
  {
   "date": "2026-11-13",
-  "short": "SHOWROOM配信（時間未発表）",
-  "time": "時間未定（朝か夕方）",
+  "short": "SHOWROOM配信",
+  "time": "8:00〜",
   "venue": "SHOWROOM",
   "kind": "SHOWROOM",
   "ticket": "https://www.showroom-live.com/r/d76e710150328",
-  "post": "2119419879866699959"
+  "post": "2120902202277671113",
+  "start": "08:00"
  },
  {
   "date": "2026-11-14",
   "short": "SHOWROOM配信",
-  "time": "21:15〜",
+  "time": "8:00〜",
   "venue": "SHOWROOM",
   "kind": "SHOWROOM",
   "ticket": "https://www.showroom-live.com/r/d76e710150328",
-  "post": "2119419879866699959",
-  "start": "21:15"
+  "post": "2121254940299706486",
+  "start": "08:00"
  },
  {
   "date": "2026-11-15",
@@ -162,6 +163,154 @@
   "start": "12:00"
  },
  {
+  "date": "2026-11-16",
+  "short": "SHOWROOM配信",
+  "time": "21:15〜",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2121968902519558169",
+  "start": "21:15"
+ },
+ {
+  "date": "2026-11-17",
+  "short": "SHOWROOM ラジオ配信（お休み）",
+  "time": "お休み（声がガラガラのため）",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2122456387133563367"
+ },
+ {
+  "date": "2026-11-18",
+  "short": "SHOWROOM ラジオ配信（お休み）",
+  "time": "お休み（寝坊のため）",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2122859589557457318"
+ },
+ {
+  "date": "2026-11-18",
+  "short": "HIRAETH定期ライブVol.41（ソロ出演）",
+  "time": "19:40〜19:50",
+  "venue": "新宿",
+  "kind": "LIVE",
+  "ticket": "",
+  "post": "2121227699758989422",
+  "start": "19:40"
+ },
+ {
+  "date": "2026-11-19",
+  "short": "SHOWROOM配信",
+  "time": "8:00〜",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2121968902519558169",
+  "start": "08:00"
+ },
+ {
+  "date": "2026-11-19",
+  "short": "グループ公式TikTok配信",
+  "time": "21:00〜22:00",
+  "venue": "グループ公式TikTok",
+  "kind": "TIKTOK",
+  "ticket": "",
+  "post": "2121968902519558169",
+  "start": "21:00",
+  "end": "22:00"
+ },
+ {
+  "date": "2026-11-20",
+  "short": "SHOWROOM配信",
+  "time": "18:00〜",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2121968902519558169",
+  "start": "18:00"
+ },
+ {
+  "date": "2026-11-21",
+  "short": "SHOWROOM配信",
+  "time": "21:15〜",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2121968902519558169",
+  "start": "21:15"
+ },
+ {
+  "date": "2026-11-22",
+  "short": "SHOWROOM配信",
+  "time": "21:15〜",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2121968902519558169",
+  "start": "21:15"
+ },
+ {
+  "date": "2026-11-23",
+  "short": "TikTok配信",
+  "time": "21:00〜",
+  "venue": "TikTok",
+  "kind": "TIKTOK",
+  "ticket": "",
+  "post": "2124465214263534027",
+  "start": "21:00"
+ },
+ {
+  "date": "2026-11-24",
+  "short": "SHOWROOM配信",
+  "time": "8:00〜",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2124465214263534027",
+  "start": "08:00"
+ },
+ {
+  "date": "2026-11-25",
+  "short": "SHOWROOM配信",
+  "time": "8:00〜",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2124465214263534027",
+  "start": "08:00"
+ },
+ {
+  "date": "2026-11-26",
+  "short": "SHOWROOM配信",
+  "time": "21:15〜",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2124465214263534027",
+  "start": "21:15"
+ },
+ {
+  "date": "2026-11-27",
+  "short": "SHOWROOM配信",
+  "time": "8:00〜",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2124465214263534027",
+  "start": "08:00"
+ },
+ {
+  "date": "2026-11-28",
+  "short": "グループ全員で配信（詳細未発表）※21:15〜個人配信の可能性あり",
+  "time": "",
+  "venue": "未発表",
+  "kind": "TIKTOK",
+  "ticket": "",
+  "post": "2124465214263534027"
+ },
+ {
   "date": "2026-11-29",
   "short": "初ステージ（お披露目LIVE）※詳細未発表",
   "time": "",
@@ -169,5 +318,15 @@
   "kind": "LIVE",
   "ticket": "",
   "post": "2119024546015773121"
+ },
+ {
+  "date": "2026-11-29",
+  "short": "SHOWROOM配信",
+  "time": "8:00〜",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2124465214263534027",
+  "start": "08:00"
  }
 ]
