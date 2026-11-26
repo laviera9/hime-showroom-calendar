@@ -1,6 +1,6 @@
 import json, calendar, datetime as dt, html
 from urllib.parse import quote
-P='https://x.com/himechanluv/status/'
+P='https://x.com/KOHAKU_HIRAETH/status/'
 HOL={'2026-11-03':'文化の日','2026-11-23':'勤労感謝の日'}
 import zoneinfo
 TODAY=dt.datetime.now(zoneinfo.ZoneInfo('Asia/Tokyo')).date()
@@ -10,7 +10,7 @@ for r in EV:
     m,d=int(r['date'][5:7]),int(r['date'][8:10])
     if r['post']: link=r['post'] if r['post'].startswith('http') else P+r['post'];v=True;nv+=1
     else:
-        link='https://x.com/search?q='+quote(f'from:himechanluv ({m}/{d} OR {m}月{d}日)',safe='')+'&f=live';v=False;ns+=1
+        link='https://x.com/search?q='+quote(f'from:KOHAKU_HIRAETH ({m}/{d} OR {m}月{d}日)',safe='')+'&f=live';v=False;ns+=1
     ev_by.setdefault(r['date'],[]).append(dict(short=r['short'],time=r['time'],venue=r['venue'],link=link,verified=v,kind=r['kind'],ticket=r['ticket'],tbd='未発表' in r['short']))
 e=html.escape
 def evhtml(ev,compact=False):
@@ -194,11 +194,11 @@ doc=f'''<!doctype html><html lang="ja"><head><meta charset="utf-8">
 <p class="cap">終了時刻は告知があるものだけ表示（17歳のため配信は22:00まで）。各予定をタップで告知ポスト。</p></section>
 {week_card}<section class="plaque"><details><summary>📅 月カレンダー・一覧を開く</summary>{month(2026,10)}{month(2026,11)}</details></section>
 <section class="plaque"><h2>Links</h2>
-<div class="row"><a class="btn" href="https://x.com/himechanluv" target="_blank" rel="noopener">𝕏 公式X</a><a class="btn" href="hime_showroom.ics">🗓️ カレンダー登録</a></div>
+<div class="row"><a class="btn" href="https://x.com/KOHAKU_HIRAETH" target="_blank" rel="noopener">𝕏 公式X</a><a class="btn" href="hime_showroom.ics">🗓️ カレンダー登録</a></div>
 <button class="btn" style="width:100%;font-family:inherit" onclick="location.reload()">🔄 最新に更新</button>
 <p class="cap">このページ/アプリから通知は届きません。見るだけでOKです🐾（カレンダー登録した場合の通知は各アプリで設定）</p></section>
 </main>
-<footer>@himechanluv の公式X告知をもとに作成。予定は変わることがあるので最新は<a href="https://x.com/himechanluv">公式X</a>で。<br>最終更新: {NOW:%Y-%m-%d %H:%M} JST</footer>
+<footer>@KOHAKU_HIRAETH の公式X告知をもとに作成。予定は変わることがあるので最新は<a href="https://x.com/KOHAKU_HIRAETH">公式X</a>で。<br>最終更新: {NOW:%Y-%m-%d %H:%M} JST</footer>
 <div class="relief b"></div>
 <script>{next_js}</script>
 <script>if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(function(){{}});</script>
@@ -210,7 +210,7 @@ manifest=dict(name='ひめ配信 – 姫咲こはく SHOWROOM',short_name='ひ�
          dict(src='assets/icon-512-maskable.png',sizes='512x512',type='image/png',purpose='maskable')])
 _json.dump(manifest,open('hime-showroom-calendar/manifest.webmanifest','w'),ensure_ascii=False,indent=1)
 open('hime-showroom-calendar/sw.js','w').write('''// network-first; cache only as offline fallback. No push.
-const C='hime-v4';
+const C='hime-v5';
 self.addEventListener('install',e=>self.skipWaiting());
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==C).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',e=>{const u=new URL(e.request.url);if(e.request.method!=='GET'||u.origin!==location.origin)return;
@@ -244,7 +244,7 @@ for i,r in enumerate(EV):
         nd=(dt.date.fromisoformat(r['date'])+dt.timedelta(days=1)).strftime('%Y%m%d')
         L+=[f'DTSTART;VALUE=DATE:{ymd}',f'DTEND;VALUE=DATE:{nd}'];desc=['詳細未発表']
     if r['ticket']: desc.append('チケット: '+r['ticket'])
-    src=(r['post'] if r['post'].startswith('http') else P+r['post']) if r['post'] else 'https://x.com/himechanluv'
+    src=(r['post'] if r['post'].startswith('http') else P+r['post']) if r['post'] else 'https://x.com/KOHAKU_HIRAETH'
     desc.append('出典: '+src)
     L+=['DTSTAMP:'+stamp,f"UID:hime-sr-{r['date']}-{i}@laviera9.github.io",'DESCRIPTION:'+esc('\n'.join(desc)),'LOCATION:'+esc(r['venue']),'END:VEVENT']
 L.append('END:VCALENDAR')
