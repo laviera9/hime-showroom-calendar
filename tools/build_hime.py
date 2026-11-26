@@ -18,8 +18,8 @@ def evhtml(ev,compact=False):
     icon='<span class="ic v" title="告知ポスト">✓</span>' if ev['verified'] else '<span class="ic s" title="公式Xの検索結果">🔍</span>'
     s=f'<a class="{cls}" href="{e(ev["link"])}" target="_blank" rel="noopener">'
     if ev['time']: s+=f'<span class="t">{e(ev["time"])}</span>'
-    s+=f'<span class="n">{e(ev["short"])}</span><span class="vn">📍{e(ev["venue"])}</span>{icon}</a>'
-    if ev['ticket'] and not compact: s+=f'<a class="tk" href="{e(ev["ticket"])}" target="_blank" rel="noopener">📺ルームへ</a>'
+    s+=f'<span class="n">{e(ev["short"])}</span><span class="vn">{e(ev["venue"])}</span>{icon}</a>'
+    if ev['ticket'] and not compact: s+=f'<a class="tk" href="{e(ev["ticket"])}" target="_blank" rel="noopener">ルームへ</a>'
     return s
 WD='日月火水木金土'
 def month(y,mo,start_day=1):
@@ -68,74 +68,77 @@ def week_rows():
         out.append(f'<li class="{cl}" data-date="{ds}"><span class="wd"><b>{d.month}/{d.day}</b>({WD[wdx]})</span><span class="wb">{body}</span></li>')
     return ''.join(out)
 css='''
-:root{--bg:#b9d3ea;--bg2:#a9c7e2;--ink:#2f4c6e;--soft:#6b86a5;--white:#fbfdff;--acc:#3f86c4;--pink:#c9577c}
+:root{--bg:#c2d8ec;--panel:#f7fafd;--ink:#2a4460;--soft:#667f98;--acc:#3f78a8;--line:#d5e3f0;--rule:#b4cde3;--yel:#ffd400;--pink:#b0587a;--serif:"Hiragino Mincho ProN","Yu Mincho","Noto Serif CJK JP","BIZ UDPMincho","Noto Serif JP",serif}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
-body{margin:0;font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Noto Sans CJK JP",sans-serif;color:var(--ink);line-height:1.5;
-background:var(--bg) radial-gradient(circle at 20% 10%,#cfe2f3 0,transparent 55%),radial-gradient(circle at 90% 80%,#c4dbef 0,transparent 50%);background-color:var(--bg);
+body{margin:0;font-family:"Hiragino Sans","Hiragino Maru Gothic ProN","Noto Sans CJK JP",sans-serif;color:var(--ink);line-height:1.6;background:var(--bg);
 padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);overflow-x:hidden}
 a{color:inherit}img{max-width:100%;display:block}
 .relief{height:56px;background:url(assets/relief-top.jpg) center/cover}
 .relief.b{background-image:url(assets/relief-bottom.jpg)}
-main{max-width:720px;margin:0 auto;padding:0 12px 24px}
-.plaque{background:linear-gradient(180deg,#c4dbef,#b3cde6);border-radius:22px;padding:16px;margin:14px 0;
-box-shadow:inset 0 2px 0 rgba(255,255,255,.7),inset 0 -3px 6px rgba(60,90,130,.18),0 6px 14px rgba(50,80,120,.18);
-border:5px solid var(--white);outline:2px dotted rgba(255,255,255,.9);outline-offset:-11px}
-h1{margin:6px 0 0;text-align:center;font-size:24px;color:#fff;text-shadow:0 1px 0 #8fb0cf,0 2px 4px rgba(40,70,110,.35);letter-spacing:.06em}
-.sub{text-align:center;font-size:12px;color:#fff;text-shadow:0 1px 2px rgba(40,70,110,.4);margin:2px 0 0}
-h2{margin:0 0 10px;font-size:17px;color:#fff;text-shadow:0 1px 2px rgba(40,70,110,.45);text-align:center}
-h2:before,h2:after{content:" ❦ ";color:#fff;opacity:.9}
-.next{text-align:center;background:var(--white);border-radius:16px;padding:14px 10px;box-shadow:inset 0 0 0 2px #dbe8f5}
-.next .lbl{font-size:12px;color:var(--soft);font-weight:bold;letter-spacing:.1em}
-.next .when{font-size:30px;font-weight:bold;color:var(--acc);margin:4px 0}
-.next .what{font-size:15px;font-weight:bold}
-.next .note{font-size:12px;color:var(--soft);margin-top:6px}
-.btn{display:block;text-align:center;text-decoration:none;font-weight:bold;border-radius:999px;padding:14px;margin:10px 0 0;font-size:17px;
-background:linear-gradient(180deg,#fff,#e6f0f9);color:var(--acc);border:3px solid #fff;box-shadow:0 3px 0 #8fb0cf,0 5px 10px rgba(40,70,110,.25)}
-.btn.main{background:linear-gradient(180deg,#5d9ed6,#3f7fb9);color:#fff;border-color:#e9f3fb}
-.row{display:flex;gap:8px}.row .btn{flex:1;font-size:14px;padding:12px 6px}
+main{max-width:680px;margin:0 auto;padding:0 16px 32px}
+.hero{text-align:center;padding:30px 0 22px}
+.cameo{width:112px;height:140px;margin:0 auto 18px;border-radius:50%;background:url(assets/hero-kohaku-jasper.jpg) 50% 14%/150%;
+border:6px solid #f7fafd;box-shadow:0 0 0 1px var(--rule),inset 0 2px 5px rgba(40,80,120,.28),-1px -1px 1px #fff,2px 4px 10px rgba(45,85,125,.28)}
+.grp{margin:0;font:400 11px/1.2 var(--serif);letter-spacing:.42em;color:var(--soft);padding-left:.42em}
+h1{margin:10px 0 0;font:500 30px/1.25 var(--serif);letter-spacing:.3em;padding-left:.3em;color:#355b82;text-shadow:1px 1px 0 rgba(255,255,255,.75)}
+h1 small{display:block;margin-top:4px;font:italic 400 15px/1.2 Georgia,"Times New Roman",serif;letter-spacing:.2em;color:#4d7399}
+.sub{font:400 11px/1.6 var(--serif);letter-spacing:.2em;color:var(--soft);margin:14px 0 0}
+.plaque{position:relative;background:var(--panel);border-radius:6px;padding:28px 20px 20px;margin:26px 0;
+box-shadow:inset 0 0 0 7px var(--panel),inset 0 0 0 8px var(--rule),inset 1px 1px 0 8px #fff,0 1px 0 #fff,-1px -1px 1px rgba(255,255,255,.7),2px 5px 14px rgba(45,85,125,.2)}
+h2{display:flex;align-items:center;gap:14px;margin:0 0 18px;font:400 14px/1 var(--serif);letter-spacing:.34em;color:var(--ink);text-transform:uppercase}
+h2:before,h2:after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--rule))}
+h2:after{background:linear-gradient(270deg,transparent,var(--rule))}
+.next{text-align:center;padding:6px 4px 4px}
+.next .lbl{font:400 11px/1 var(--serif);color:var(--soft);letter-spacing:.3em}
+.next .when{font:500 30px/1.3 var(--serif);color:var(--acc);margin:12px 0 6px;letter-spacing:.04em}
+.next .what{font-size:14px;letter-spacing:.08em}
+.next .note{font-size:11px;color:var(--soft);margin-top:10px}
+.btn{display:block;text-align:center;text-decoration:none;font:500 14px/1.4 var(--serif);letter-spacing:.14em;border-radius:3px;padding:13px;margin:16px 0 0;
+background:#fff;color:var(--acc);border:1px solid var(--rule);box-shadow:inset 0 1px 0 #fff,0 1px 3px rgba(45,85,125,.15)}
+.btn.main{background:#5d8db8;color:#fff;border-color:#4d7ca7;box-shadow:inset 0 1px 0 rgba(255,255,255,.35),inset 0 -1px 2px rgba(20,50,90,.25),0 2px 5px rgba(45,85,125,.25)}
+.row{display:flex;gap:10px}.row .btn{flex:1;font-size:13px;padding:12px 6px}
 .week{list-style:none;margin:0;padding:0}
-.week li{display:flex;gap:10px;align-items:flex-start;background:var(--white);border-radius:14px;padding:10px 12px;margin-bottom:7px;box-shadow:inset 0 0 0 2px #dbe8f5}
-.week li.today{box-shadow:inset 0 0 0 3px #f0c75e;background:#fffaf0}
-.week li.past{opacity:.55}
-.wd{flex:none;width:72px;font-size:13px;color:var(--soft)}.wd b{font-size:19px;color:var(--ink);margin-right:2px}
+.week li{position:relative;display:flex;gap:12px;align-items:flex-start;padding:13px 4px 13px 14px;border-top:1px solid var(--line)}
+.week li:first-child{border-top:0}
+.week li.today:before{content:"";position:absolute;left:2px;top:14px;bottom:14px;width:3px;background:var(--yel);border-radius:2px}
+.week li.today:after{content:"TODAY";position:absolute;right:2px;top:12px;background:var(--yel);color:#2a3340;font:700 8px/1 sans-serif;letter-spacing:.1em;padding:3px 6px;border-radius:2px}
+.week li.past{opacity:.5}
+.wd{flex:none;width:74px;font-size:12px;color:var(--soft)}.wd b{font:500 18px var(--serif);color:var(--ink);margin-right:2px;letter-spacing:.02em}
 .week li.sun .wd,.week li.sun .wd b{color:var(--pink)}.week li.sat .wd,.week li.sat .wd b{color:var(--acc)}
 .wb{flex:1;min-width:0}
-.wk-ev{display:block;text-decoration:none;font-size:15px;overflow-wrap:anywhere}.wk-ev b{color:var(--acc);font-size:17px}
-.wk-none{color:#9fb3c8;font-size:14px}
-.wkimg{border-radius:14px;border:4px solid #fff;box-shadow:0 4px 10px rgba(40,70,110,.25)}
-.cap{font-size:12px;color:#fff;text-shadow:0 1px 2px rgba(40,70,110,.5);margin:8px 2px 0}
-details{background:var(--white);border-radius:16px;padding:10px 12px}
-summary{font-weight:bold;cursor:pointer;color:var(--acc);font-size:15px}
-.month{margin:10px 0}.month h2{color:var(--ink);text-shadow:none;font-size:16px}.month h2:before,.month h2:after{content:""}
-.month h2 .mn{font-size:22px;color:var(--acc)}.month h2 small{font-size:12px;color:var(--soft);font-weight:normal}
-.grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px}
-.hd{text-align:center;font-weight:bold;font-size:12px;padding:3px 0;border-radius:6px;background:#e3eef8;color:var(--soft)}
+.wk-ev{display:block;text-decoration:none;font-size:14px;overflow-wrap:anywhere}.wk-ev b{color:var(--acc);font:500 16px var(--serif)}
+.wk-none{color:#9db2c6;font-size:13px}
+.wkimg{border-radius:4px;border:4px solid #fff;box-shadow:0 3px 8px rgba(40,70,110,.2)}
+.cap{font-size:11px;color:var(--soft);margin:14px 2px 0;line-height:1.7}
+details{padding:2px 0}
+summary{cursor:pointer;color:var(--acc);font:500 14px var(--serif);letter-spacing:.14em}
+.month{margin:18px 0}.month h2{display:block;margin:0 0 14px;text-align:center;font:400 14px var(--serif);letter-spacing:.2em}.month h2:before,.month h2:after{content:none}
+.month h2 .mn{font-size:24px;color:var(--acc)}.month h2 small{font-size:11px;color:var(--soft)}
+.grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:0;border-top:1px solid var(--rule)}
+.hd{text-align:center;font:400 11px/1 var(--serif);padding:9px 0;color:var(--soft);border-bottom:1px solid var(--rule)}
 .hd.sun{color:var(--pink)}.hd.sat{color:var(--acc)}
-.cell{min-height:40px;border-radius:8px;padding:2px;background:#f4f8fc;border:1px solid #dbe8f5;min-width:0;overflow:hidden;text-align:center}
-.cell.out{background:transparent;border:none}.cell.past{opacity:.4}
-.cell.today{box-shadow:inset 0 0 0 2px #f0c75e;background:#fffaf0}
+.cell{min-height:44px;padding:5px 2px;min-width:0;overflow:hidden;text-align:center;border-bottom:1px solid var(--line)}
+.cell.out{border-color:transparent}.cell.past{opacity:.45}
+.cell.today{box-shadow:inset 0 -2px 0 var(--yel)}
 .cell .ev,.cell .tk,.hol,.tdy{display:none}
-.cell:has(.ev)::after{content:"♡";display:block;color:var(--acc);font-size:13px;line-height:1}
+.cell:has(.ev)::after{content:"♡";display:block;color:var(--acc);font-size:11px;line-height:1.2}
 .cell.past::after{content:none!important}
-.dn{font-size:12px;font-weight:bold}.cell.sun .dn{color:var(--pink)}.cell.sat .dn{color:var(--acc)}
-.list{list-style:none;margin:10px 0 0;padding:0}
-.list li{display:flex;gap:8px;padding:7px 2px;border-top:1px dashed #cfe0ef}
-.list li.today{background:#fffaf0}
-.ld{width:50px;flex:none;text-align:center}.ld b{display:block;font-size:16px}.ld span{font-size:11px;color:var(--soft)}
+.dn{font:400 12px var(--serif)}.cell.sun .dn{color:var(--pink)}.cell.sat .dn{color:var(--acc)}
+.list{list-style:none;margin:16px 0 0;padding:0}
+.list li{display:flex;gap:10px;padding:10px 2px;border-top:1px solid var(--line)}
+.list li.today{box-shadow:inset 3px 0 0 var(--yel);padding-left:10px}
+.ld{width:50px;flex:none;text-align:center}.ld b{display:block;font:500 16px var(--serif)}.ld span{font-size:11px;color:var(--soft)}
 .list li.sun .ld{color:var(--pink)}.list li.sat .ld{color:var(--acc)}
 .le{flex:1;min-width:0}
-.ev{position:relative;display:block;text-decoration:none;background:#fff;border:1px solid #dbe8f5;border-left:4px solid var(--acc);border-radius:8px;padding:5px 22px 5px 8px;margin-bottom:4px;font-size:13px;overflow-wrap:anywhere}
-.ev.tbd{border-left-color:#a9bccf;color:var(--soft)}.ev.photo{border-left-color:#e3a73b}
-.ev .t{display:block;font-weight:bold;color:var(--acc)}.ev .n{display:block;font-weight:bold}.ev .vn{display:block;color:var(--soft);font-size:11px}
-.ev .ic{position:absolute;right:5px;top:6px;font-size:10px}
-.ic.v{color:#fff;background:#1d9bf0;border-radius:50%;width:13px;height:13px;text-align:center;font-size:9px;line-height:13px}
-.tk{display:inline-block;font-size:12px;color:var(--acc);text-decoration:none;margin:0 0 4px 4px}
-footer{text-align:center;font-size:12px;color:#fff;text-shadow:0 1px 2px rgba(40,70,110,.5);padding:4px 16px 16px}
-footer a{color:#fff}
-
-.hero{text-align:center;padding:4px 0 2px}
-.cameo{width:104px;height:128px;margin:6px auto 8px;border-radius:50%;background:url(assets/hero-kohaku.jpg) 48% 8%/160%;border:5px solid var(--white);outline:2px dotted rgba(255,255,255,.9);outline-offset:-1px;box-shadow:0 0 0 2px #b3cde6,inset 0 2px 4px rgba(40,70,110,.2),0 5px 12px rgba(50,80,120,.28)}
-@media (min-width:600px){.cameo{width:120px;height:148px}}
+.ev{position:relative;display:block;text-decoration:none;border-left:2px solid var(--rule);padding:3px 22px 3px 10px;margin-bottom:6px;font-size:13px;overflow-wrap:anywhere}
+.ev.tbd{color:var(--soft)}.ev.photo{border-left-color:var(--acc)}
+.ev .t{display:block;font:500 14px var(--serif);color:var(--acc)}.ev .n{display:block}.ev .vn{display:block;color:var(--soft);font-size:11px}
+.ev .ic{position:absolute;right:4px;top:6px;font-size:10px}
+.ic.v{color:var(--acc);font-size:11px}
+.tk{display:inline-block;font-size:12px;color:var(--acc);text-decoration:none;margin:0 0 4px 10px}
+footer{text-align:center;font-size:11px;color:var(--ink);padding:4px 20px 20px;line-height:1.8}
+footer a{color:var(--acc)}
+@media (min-width:600px){.cameo{width:128px;height:160px}h1{font-size:36px}.plaque{padding:32px 32px 24px}}
 '''
 next_js='''
 (function(){
@@ -167,7 +170,7 @@ doc=f'''<!doctype html><html lang="ja"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>ひめ配信 | 姫咲こはく SHOWROOM配信スケジュール</title>
 <link rel="manifest" href="manifest.webmanifest">
-<meta name="theme-color" content="#b9d3ea">
+<meta name="theme-color" content="#c2d8ec">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="ひめ配信">
@@ -175,31 +178,31 @@ doc=f'''<!doctype html><html lang="ja"><head><meta charset="utf-8">
 <style>{css}</style></head><body>
 <div class="relief"></div>
 <main>
-<header class="hero"><div class="cameo" role="img" aria-label="姫咲こはく"></div><h1>ひめ配信 🩵</h1><p class="sub">姫咲こはく SHOWROOM ／ 時刻はすべて日本時間</p></header>
+<header class="hero"><div class="cameo" role="img" aria-label="姫咲こはく"></div><p class="grp">HIRAETH.TOKYO</p><h1>姫咲こはく<small>Kohaku</small></h1><p class="sub">配信スケジュール ／ 日本時間</p></header>
 <section class="plaque"><h2>Next</h2><div class="next" id="next"><div class="lbl">次の配信</div><div class="what">読み込み中…</div></div>
-<a class="btn main" href="{SR}" target="_blank" rel="noopener">📺 SHOWROOMルームを開く</a>
+<a class="btn main" href="{SR}" target="_blank" rel="noopener">SHOWROOMルームを開く</a>
 <p class="cap">※配信はSHOWROOM（外部サイト/アプリ）で開きます。このアプリ内では再生できません。</p></section>
 <section class="plaque"><h2>This Week</h2><ul class="week">{week_rows()}</ul>
 <p class="cap">終了時刻は告知があるものだけ表示（17歳のため配信は22:00まで）。各予定をタップで告知ポスト。</p></section>
-{week_card}<section class="plaque"><details><summary>📅 月カレンダー・一覧を開く</summary>{month(2026,10)}{month(2026,11)}</details></section>
+{week_card}<section class="plaque"><details><summary>月カレンダー・一覧を開く</summary>{month(2026,10)}{month(2026,11)}</details></section>
 <section class="plaque"><h2>Links</h2>
-<div class="row"><a class="btn" href="https://x.com/KOHAKU_HIRAETH" target="_blank" rel="noopener">𝕏 公式X</a><a class="btn" href="hime_showroom.ics">🗓️ カレンダー登録</a></div>
-<button class="btn" style="width:100%;font-family:inherit" onclick="location.reload()">🔄 最新に更新</button>
-<p class="cap">このページ/アプリから通知は届きません。見るだけでOKです🐾（カレンダー登録した場合の通知は各アプリで設定）</p></section>
+<div class="row"><a class="btn" href="https://x.com/KOHAKU_HIRAETH" target="_blank" rel="noopener">公式X</a><a class="btn" href="hime_showroom.ics">カレンダー登録</a></div>
+<button class="btn" style="width:100%;font-family:inherit" onclick="location.reload()">最新に更新</button>
+<p class="cap">このページ/アプリから通知は届きません。見るだけでOKです（カレンダー登録した場合の通知は各アプリで設定）</p></section>
 </main>
-<footer>@KOHAKU_HIRAETH の公式X告知をもとに作成。予定は変わることがあるので最新は<a href="https://x.com/KOHAKU_HIRAETH">𝕏 公式X</a>で。<br>最終更新: {NOW:%Y-%m-%d %H:%M} JST</footer>
+<footer>@KOHAKU_HIRAETH の公式X告知をもとに作成。予定は変わることがあるので最新は<a href="https://x.com/KOHAKU_HIRAETH">公式X</a>で。<br>最終更新: {NOW:%Y-%m-%d %H:%M} JST</footer>
 <div class="relief b"></div>
 <script>{next_js}</script>
 <script>if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(function(){{}});</script>
 </body></html>'''
 open('hime-showroom-calendar/index.html','w').write(doc)
 manifest=dict(name='ひめ配信 – 姫咲こはく SHOWROOM',short_name='ひめ配信',start_url='./',scope='./',display='standalone',
-  background_color='#b9d3ea',theme_color='#b9d3ea',lang='ja',
+  background_color='#c2d8ec',theme_color='#c2d8ec',lang='ja',
   icons=[dict(src='assets/icon-192.png',sizes='192x192',type='image/png'),dict(src='assets/icon-512.png',sizes='512x512',type='image/png'),
          dict(src='assets/icon-512-maskable.png',sizes='512x512',type='image/png',purpose='maskable')])
 _json.dump(manifest,open('hime-showroom-calendar/manifest.webmanifest','w'),ensure_ascii=False,indent=1)
 open('hime-showroom-calendar/sw.js','w').write('''// network-first; cache only as offline fallback. No push.
-const C='hime-v7';
+const C='hime-v8';
 self.addEventListener('install',e=>self.skipWaiting());
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==C).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',e=>{const u=new URL(e.request.url);if(e.request.method!=='GET'||u.origin!==location.origin)return;
