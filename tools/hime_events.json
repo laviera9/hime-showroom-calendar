@@ -314,12 +314,13 @@
  },
  {
   "date": "2026-11-28",
-  "short": "個人配信の可能性あり（夜）",
-  "time": "夜（時間未定）",
+  "short": "SHOWROOM配信",
+  "time": "21:15〜",
+  "start": "21:15",
   "venue": "SHOWROOM",
   "kind": "SHOWROOM",
   "ticket": "https://www.showroom-live.com/r/d76e710150328",
-  "post": "2126486097098358838"
+  "post": "2126609259173666962"
  },
  {
   "date": "2026-11-29",
