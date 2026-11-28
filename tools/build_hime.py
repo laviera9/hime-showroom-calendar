@@ -210,7 +210,7 @@ manifest=dict(name='ひめ配信 – 姫咲こはく SHOWROOM',short_name='ひ�
          dict(src='assets/icon-512-maskable.png',sizes='512x512',type='image/png',purpose='maskable')])
 _json.dump(manifest,open('hime-showroom-calendar/manifest.webmanifest','w'),ensure_ascii=False,indent=1)
 open('hime-showroom-calendar/sw.js','w').write('''// network-first; cache only as offline fallback. No push.
-const C='hime-v9';
+const C='hime-v10';
 self.addEventListener('install',e=>self.skipWaiting());
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==C).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',e=>{const u=new URL(e.request.url);if(e.request.method!=='GET'||u.origin!==location.origin)return;

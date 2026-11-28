@@ -303,12 +303,23 @@
  },
  {
   "date": "2026-11-28",
-  "short": "グループ全員で配信（詳細未発表）※21:15〜個人配信の可能性あり",
-  "time": "",
-  "venue": "未発表",
+  "short": "グループ全員配信（公式TikTok LIVE）",
+  "time": "16:00〜17:00",
+  "start": "16:00",
+  "end": "17:00",
+  "venue": "グループ公式TikTok",
   "kind": "TIKTOK",
-  "ticket": "",
-  "post": "2124465214263534027"
+  "ticket": "https://www.tiktok.com/@hiraethtokyo/live",
+  "post": "2126496646649536854"
+ },
+ {
+  "date": "2026-11-28",
+  "short": "個人配信の可能性あり（夜）",
+  "time": "夜（時間未定）",
+  "venue": "SHOWROOM",
+  "kind": "SHOWROOM",
+  "ticket": "https://www.showroom-live.com/r/d76e710150328",
+  "post": "2126486097098358838"
  },
  {
   "date": "2026-11-29",
